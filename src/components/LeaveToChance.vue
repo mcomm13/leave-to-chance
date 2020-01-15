@@ -18,8 +18,8 @@
             </v-card-text>
             <v-row v-if="randomPick">
               <v-col class="result">
-                <div class="result__header">Your randomly selected option is:</div>
-                <div class="result__value">{{randomPick}}</div>
+                <div class="result__header">Your randomly selected choice is:</div>
+                <div class="result__value">Option #{{randomPick}}</div>
               </v-col>
             </v-row>
             <v-card-actions>
