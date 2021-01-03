@@ -3,7 +3,11 @@
     <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">Leave To Chance</div>
       <v-spacer></v-spacer>
-      <v-btn href="https://github.com/mcomm13/leave-to-chance" target="_blank" text>
+      <v-btn
+        href="https://github.com/mcomm13/leave-to-chance"
+        target="_blank"
+        text
+      >
         <span class="mr-2">View on GitHub</span>
         <v-icon>mdi-github-circle</v-icon>
       </v-btn>
@@ -20,23 +24,22 @@
 </template>
 
 <script>
-import LeaveToChance from "./components/LeaveToChance";
+import LeaveToChance from './components/LeaveToChance';
 
 export default {
-  name: "App",
+  name: 'App',
 
   components: {
-    LeaveToChance
+    LeaveToChance,
   },
 
   data: () => ({
     //
-  })
+  }),
 };
 </script>
-
 <style lang="scss">
 .v-application--wrap {
-  min-height: 75vh;
+  min-height: 100vh;
 }
 </style>

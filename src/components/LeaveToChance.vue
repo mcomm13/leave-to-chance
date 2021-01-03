@@ -12,19 +12,26 @@
                   <strong>How many options are you choosing from?</strong>
                 </v-col>
                 <v-col>
-                  <v-text-field v-model="numOfOptions" label="Number of options" />
+                  <v-text-field
+                    v-model="numOfOptions"
+                    label="Number of options"
+                  />
                 </v-col>
               </v-row>
             </v-card-text>
             <v-row v-if="randomPick">
               <v-col class="result">
-                <div class="result__header">Your randomly selected choice is:</div>
-                <div class="result__value">Option #{{randomPick}}</div>
+                <div class="result__header">
+                  Your randomly selected choice is:
+                </div>
+                <div class="result__value">Option #{{ randomPick }}</div>
               </v-col>
             </v-row>
-            <v-card-actions>
+            <v-card-actions style="padding: 24px">
               <v-row align="center" justify="center">
-                <v-btn v-on:click="makeRandomPick" color="primary">Make Random Pick</v-btn>
+                <v-btn v-on:click="makeRandomPick" color="primary"
+                  >Make Random Pick</v-btn
+                >
               </v-row>
             </v-card-actions>
           </v-card>
@@ -40,15 +47,18 @@ export default {
   data: () => {
     return {
       randomPick: 0,
-      numOfOptions: 2
+      numOfOptions: 2,
     };
   },
   methods: {
     makeRandomPick: function() {
-      this.numOfOptions = parseInt(this.numOfOptions);
-      this.randomPick = Math.floor(Math.random() * this.numOfOptions) + 1;
-    }
-  }
+      this.randomPick = 0;
+      setTimeout(() => {
+        this.numOfOptions = parseInt(this.numOfOptions);
+        this.randomPick = Math.floor(Math.random() * this.numOfOptions) + 1;
+      }, 300);
+    },
+  },
 };
 </script>
 
