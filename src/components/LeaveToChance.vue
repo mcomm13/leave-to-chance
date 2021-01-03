@@ -27,7 +27,7 @@
                 <div class="result__value">Option #{{ randomPick }}</div>
               </v-col>
             </v-row>
-            <v-card-actions style="padding: 24px">
+            <v-card-actions>
               <v-row align="center" justify="center">
                 <v-btn v-on:click="makeRandomPick" color="primary"
                   >Make Random Pick</v-btn
